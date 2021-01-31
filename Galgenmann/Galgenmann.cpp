@@ -10,7 +10,6 @@ int main()
 {
     string wort = "GALGENMAENCHEN";
     string loesung;
-    int pos;
     char c;
     int versuche = 10;
     int fehlend = wort.length();
@@ -39,10 +38,12 @@ int main()
             
             versuche--;
         if (fehlend <= 0) {
+            cout << loesung << endl;
             cout << "Gewonnen" << endl;
             break;
         }
         if (versuche <= 0) {
+            cout << "Loesung: " << wort << endl;
             cout << "Verloren" << endl;
             break;
         }
